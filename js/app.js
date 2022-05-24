@@ -23,11 +23,30 @@ Generatore di “nomi cognomi” casuali: il Grande Gatsby
 ha  una lista di nomi e una lista di cognomi, e da queste
 vuole generare una falsa lista di invitati con nome e cognome.*/
 
+//genero 2 liste, una per i nomi e una per i cognomi
+const nameList = ["John","Jack","Mike","Rose","Anne","Gerald","Lewis","Megan","Christie"];
+const surnameList = ["Johnson","Jackson","James","Wellington","Di Caprio","Wade","Livingston"];
+// importo il bottone che genera la lista
+const btnGenerate = document.getElementById("btnGenerate");
+let randomName;
+let randomSurname;
+let hostList = document.getElementById("hostList")
 
-
-
+btnGenerate.addEventListener("click", function() {
+    
+    for(let i = 0; i < nameList.length; i++) {
+        randomName = nameList[Math.round(Math.random() * (nameList.length - 1))]
+        randomSurname = surnameList[Math.round(Math.random() * (surnameList.length - 1))]
+        console.log(randomName,randomSurname)
+        hostList.innerHTML += `<li>${randomName} ${randomSurname}</li>`
+    }
+    
+});
 
 
 /*Snack3
 Crea un array di numeri interi e fai la somma di tutti 
 gli elementi  che sono in posizione (indice) dispari*/
+
+const numeriInteri = [3,5,6,8,9,0,23,25,76,34,98,213,567,78,93,67]
+
