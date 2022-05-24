@@ -33,20 +33,36 @@ let randomSurname;
 let hostList = document.getElementById("hostList")
 
 btnGenerate.addEventListener("click", function() {
-    
-    for(let i = 0; i < nameList.length; i++) {
-        randomName = nameList[Math.round(Math.random() * (nameList.length - 1))]
-        randomSurname = surnameList[Math.round(Math.random() * (surnameList.length - 1))]
-        console.log(randomName,randomSurname)
-        hostList.innerHTML += `<li>${randomName} ${randomSurname}</li>`
-    }
+
+    for(let i = 0; i < 15; i++) {
+        randomName = nameList[Math.floor(Math.random() * nameList.length )];
+        randomSurname = surnameList[Math.floor(Math.random() * surnameList.length)];
+        console.log(randomName,randomSurname);
+        hostList.innerHTML += `<li>${randomName} ${randomSurname}</li>`;
+    };
     
 });
+
 
 
 /*Snack3
 Crea un array di numeri interi e fai la somma di tutti 
 gli elementi  che sono in posizione (indice) dispari*/
 
-const numeriInteri = [3,5,6,8,9,0,23,25,76,34,98,213,567,78,93,67]
+const listaNumeri = [3,5,6,8,9,0,23,25,76,34,98,213,567,78,93,67];
+const sommaIndiciDispari = [];
 
+let somma = 0;
+
+for(let i=0; i<listaNumeri.length; i++) {
+    if(i % 2 === 0) {
+        somma += listaNumeri[i];
+        sommaIndiciDispari.push(listaNumeri[i])
+    } else {
+        somma=somma
+    }
+
+}
+
+console.log(somma);
+console.log(sommaIndiciDispari);
