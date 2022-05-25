@@ -73,3 +73,25 @@ title.innerHTML=`Somma numeri dispari: ${somma}`
 Crea due array che hanno un numero di elementi diversi.  Aggiungi 
 elementi all’array che ha meno elementi fino a quando ne avrà 
 tanti quanti l’altro.*/
+// creo 2 array
+
+let arrayOne = [2,4,7,8,5,3,,5,8,9,0]
+let arrayTwo = [6,85,34,7,8,4,4,7,7,45,23,54,4,2,5,]
+
+let arrayPiuPiccolo;
+let differenza = 0;
+
+if(arrayOne.length > arrayTwo.length) {
+    arrayPiuPiccolo = arrayTwo;
+    differenza = arrayOne.length - arrayTwo.length;
+} else if (arrayOne.length < arrayTwo.length) {
+    arrayPiuPiccolo = arrayOne;
+    differenza = arrayTwo.length - arrayOne.length;
+}
+
+for(let i=0; i<differenza; i++) {
+    arrayPiuPiccolo.push("placeholder")
+}
+
+console.log(arrayOne)
+console.log(arrayTwo)
